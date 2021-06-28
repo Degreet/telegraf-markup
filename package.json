@@ -1,6 +1,6 @@
 {
   "name": "telegraf-markup4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Telegraf Markup from v4 for v3.38",
   "main": "index.js",
   "scripts": {
