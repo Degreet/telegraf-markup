@@ -8,8 +8,12 @@ module.exports = {
 	},
 
 	keyboard: {
-		reply: (btns) => Markup.keyboard(btns).oneTime().resize().extra(),
 		inline: (btns) => Extra.markup(Markup.inlineKeyboard(btns)),
 		none: () => Extra.markup(Markup.removeKeyboard()),
+		reply: (btns, oneTime = false) => {
+			let markup = Markup.keyboard(btns)
+			if (oneTime) markup = markup.oneTime()
+			return markup.resize().extra()
+		},
 	},
 }
